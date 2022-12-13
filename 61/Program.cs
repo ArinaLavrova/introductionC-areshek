@@ -1,7 +1,7 @@
 ﻿// 61 Показать двумерный массив размером m×n заполненный вещественными случайными числами
-int[,] Random2DArray(int n,int m, int min=0,int max=10)
+double[,] Random2DArray(double n,double m, double min=0,double max=10)
 {
-    int[,] a=new int[n,m];
+    double[,] a=new double[n,m];
     Random random=new Random();
     for(int i=0;i<n;i++)
         for(int j=0;j<m;j++)
@@ -9,7 +9,7 @@ int[,] Random2DArray(int n,int m, int min=0,int max=10)
     return a;
 }
 
-void Print2DArray(int[,] a)
+void Print2DArray(double[,] a)
 {
     for(int i=0;i<a.GetLength(0);i++)
         {
@@ -19,7 +19,7 @@ void Print2DArray(int[,] a)
         }
 }
 
-bool LinerSearch2DArray(int[,] a,int find, out int i,out int j)
+bool LinerSearch2DArray(double[,] a,double find, out double i,out double j)
 {
     for(i=0;i<a.GetLength(0);i++)
         
@@ -31,7 +31,7 @@ bool LinerSearch2DArray(int[,] a,int find, out int i,out int j)
         
 }
 
-void Sort2DArray(int[,] a)
+void Sort2DArray(double[,] a)
 {
     for(int j=0;j<a.GetLength(1);j++)
         for(int k=0;k<a.GetLength(0);k++)
@@ -60,4 +60,3 @@ System.Console.WriteLine();
 Sort2DArray(a);
 Print2DArray(a);
 
-(очень извиняюсь,я правда пыталась,но мне сейчас на столько плохо,что согласна на любую оценку)
